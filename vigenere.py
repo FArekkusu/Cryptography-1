@@ -8,7 +8,7 @@ ENGLISH_IC = 1.73
 def crack_vigenere(encrypted_bytes):
     possible_key_lens = get_possible_lens(encrypted_bytes)
     options = set()
-    for step in possible_key_lens[:20]:
+    for step in possible_key_lens:
         columns = [crack_single_byte_xor(encrypted_bytes[start::step]) for start in range(step)]
         candidate = "".join("".join(x) for x in zip_longest(*columns, fillvalue=""))
 
