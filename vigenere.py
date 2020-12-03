@@ -1,4 +1,3 @@
-
 from collections import Counter
 from itertools import zip_longest
 from single_byte_xor import crack_single_byte_xor
